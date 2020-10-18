@@ -1096,14 +1096,14 @@ public class JPerfUI extends JFrame
 		toolbar.add(getQuickStartPanel());
 
 		// run button
-		startIperf = new JButton(new ImageIcon(JPerfUI.class.getResource("start.png")));
+		startIperf = new JButton(new ImageIcon(JPerfUI.class.getResource("/start.png")));
 		startIperf.setToolTipText("Run Iperf3");
 		startIperf.setText("Run Iperf3");
 		startIperf.setActionCommand("Run");
 		startIperf.addActionListener(this);
 
 		// add stop button
-		stopIperf = new JButton(new ImageIcon(JPerfUI.class.getResource("logout.png")));
+		stopIperf = new JButton(new ImageIcon(JPerfUI.class.getResource("/logout.png")));
 		stopIperf.setToolTipText("Stop Iperf3");
 		stopIperf.setText("Stop Iperf3");
 		stopIperf.setActionCommand("Stop");
@@ -1111,19 +1111,19 @@ public class JPerfUI extends JFrame
 		stopIperf.setEnabled(false);
 		
 		// save configuration button
-		saveConfiguration = new JButton(new ImageIcon(JPerfUI.class.getResource("filesaveas.png")));
+		saveConfiguration = new JButton(new ImageIcon(JPerfUI.class.getResource("/filesaveas.png")));
 		saveConfiguration.setToolTipText("Save configuration");
 		saveConfiguration.setActionCommand("SaveConfiguration");
 		saveConfiguration.addActionListener(this);
 		
 		// load configuration button
-		loadConfiguration = new JButton(new ImageIcon(JPerfUI.class.getResource("fileopen.png")));
+		loadConfiguration = new JButton(new ImageIcon(JPerfUI.class.getResource("/fileopen.png")));
 		loadConfiguration.setToolTipText("Load configuration");
 		loadConfiguration.setActionCommand("LoadConfiguration");
 		loadConfiguration.addActionListener(this);
 		
 		// restore defaults button
-		restoreDefaults = new JButton(new ImageIcon(JPerfUI.class.getResource("reload.png")));
+		restoreDefaults = new JButton(new ImageIcon(JPerfUI.class.getResource("/reload.png")));
 		restoreDefaults.setToolTipText("Restore default settings");
 		restoreDefaults.setActionCommand("Restore");
 		restoreDefaults.addActionListener(this);

@@ -16,7 +16,6 @@
 package net.nlanr.jperf.ui;
 
 import com.googlecode.iperf3cygwin.Iperf3cygwin;
-import net.nlanr.jperf.JPerf;
 
 import javax.swing.*;
 import java.awt.*;
@@ -46,7 +45,7 @@ public class JPerfAboutPanel extends JPanel
 		// print out name, print out version, print out copyright (short statement), and web link
 
 		// Iperf graphic
-		ImageIcon icon = new ImageIcon(JPerfAboutPanel.class.getResource("Iperf-words.jpg"));
+		ImageIcon icon = new ImageIcon(JPerfAboutPanel.class.getResource("/Iperf-words.jpg"));
 		JLabel pic = new JLabel(icon);
 		top.add(pic);
 
@@ -54,7 +53,7 @@ public class JPerfAboutPanel extends JPanel
 		info.setLayout(new BoxLayout(info, BoxLayout.Y_AXIS));
 
 		// Make this bold!
-		JLabel name = new JLabel("<html>Iperf3-Cygwin-GUI (based on Jperf "+JPerf.JPERF_VERSION+")</html>");
+		JLabel name = new JLabel("<html>Iperf3-Cygwin-GUI (based on Jperf "+Iperf3cygwin.IPERF3CYGWIN_VERSION+")</html>");
 		name.setHorizontalAlignment(JLabel.CENTER);
 		name.setAlignmentX(Component.CENTER_ALIGNMENT);
 		info.add(name);

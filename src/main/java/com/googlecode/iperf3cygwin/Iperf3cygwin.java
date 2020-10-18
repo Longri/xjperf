@@ -24,10 +24,10 @@
 
 package com.googlecode.iperf3cygwin;
 
-import net.nlanr.jperf.JPerf;
 import net.nlanr.jperf.ui.JPerfUI;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -37,7 +37,7 @@ import java.util.Properties;
 // import com.googlecode.com.googlecode.iperf3cygwin.ui.Iperf3cygwinUI;
 
 
-public class Iperf3cygwin extends JPerf
+public class Iperf3cygwin
 {
 	public static final String IPERF3CYGWIN_VERSION = "3.0b4-03";
 	public static final String IPERF3CYGWIN_URL = "http://code.google.com/p/iperf3-cygwin-gui/";
@@ -58,7 +58,10 @@ public class Iperf3cygwin extends JPerf
 				// if the OS is Windows, then we set the sytem Look'n Feel
 				Properties sysprops = System.getProperties();
 				String osName = ((String)sysprops.get("os.name")).toLowerCase();
-				if (osName.matches(".*win.*") || osName.matches(".*dos.*") || osName.matches(".*microsoft.*"))
+				if (osName.matches(".*win.*")
+						|| osName.matches(".*windows*")
+						|| osName.matches(".*dos.*")
+						|| osName.matches(".*microsoft.*"))
 				{
 					// check whether iperf.exe is available
 					if (new File("bin/iperf3.exe").exists())
@@ -176,5 +179,12 @@ public class Iperf3cygwin extends JPerf
 			}
 		});
 	}
-	
+	private static GraphicsDevice screenDevice = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+
+	public static void centerFrameOnScreen(JFrame frame) {
+		Rectangle bounds = frame.getBounds();
+		frame.setLocation(
+				screenDevice.getDisplayMode().getWidth() / 2 - bounds.width / 2,
+				screenDevice.getDisplayMode().getHeight() / 2 - bounds.height / 2);
+	}
 }
