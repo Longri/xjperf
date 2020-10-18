@@ -10,10 +10,8 @@
 
 package net.nlanr.jperf.ui;
 
-import java.awt.Dimension;
-
-import javax.swing.JSpinner;
-import javax.swing.SpinnerNumberModel;
+import javax.swing.*;
+import java.awt.*;
 
 public class IntegerSpinner extends JSpinner
 {

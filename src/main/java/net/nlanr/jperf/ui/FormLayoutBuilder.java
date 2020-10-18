@@ -10,14 +10,13 @@
 
 package net.nlanr.jperf.ui;
 
-import java.awt.Component;
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import javax.swing.JPanel;
-
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class FormLayoutBuilder
 {

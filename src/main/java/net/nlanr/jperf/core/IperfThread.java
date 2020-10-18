@@ -14,17 +14,16 @@
 
 package net.nlanr.jperf.core;
 
-import java.io.*;
-
-import java.util.*;
-
 import net.nlanr.jperf.ui.JPerfUI;
 import net.nlanr.jperf.ui.JPerfWaitWindow;
 
+import javax.swing.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Vector;
-import java.util.regex.*;
-
-import javax.swing.SwingUtilities;
+import java.util.regex.Pattern;
 
 public class IperfThread extends Thread
 {

@@ -11,13 +11,10 @@
 
 package net.nlanr.jperf.ui;
 
-import java.awt.BorderLayout;
-
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-
 import org.jdesktop.swingx.JXBusyLabel;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class JPerfWaitWindow extends JDialog
 {

@@ -15,26 +15,12 @@
 
 package net.nlanr.jperf.ui;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.FlowLayout;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
-import javax.swing.BoxLayout;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTabbedPane;
-import javax.swing.JTextArea;
-
-import net.nlanr.jperf.JPerf;
 import com.googlecode.iperf3cygwin.Iperf3cygwin;
+import net.nlanr.jperf.JPerf;
+
+import javax.swing.*;
+import java.awt.*;
+import java.io.*;
 
 public class JPerfAboutPanel extends JPanel 
 {

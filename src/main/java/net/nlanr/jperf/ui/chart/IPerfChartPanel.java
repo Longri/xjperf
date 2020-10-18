@@ -10,18 +10,7 @@
 
 package net.nlanr.jperf.ui.chart;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.GridLayout;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
 import net.nlanr.jperf.core.Measurement;
-
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.AxisLocation;
@@ -33,6 +22,12 @@ import org.jfree.chart.renderer.xy.XYItemRenderer;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
+
+import javax.swing.*;
+import java.awt.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
 
 public class IPerfChartPanel extends AbstractChartPanel
 	implements Runnable

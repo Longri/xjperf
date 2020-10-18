@@ -1,0 +1,53 @@
+plugins {
+    id 'java'
+
+    /**
+     * Gradle Versions Plugin
+     * usage: './gradlew dependencyUpdates'
+     * see https://github.com/ben-manes/gradle-versions-plugin#gradle-versions-plugin
+     *
+     * all version numbers are handled on 'ext' section
+     */
+    id "com.github.ben-manes.versions" version "0.33.0"
+}
+
+group 'de.longri'
+version '3.0-SNAPSHOT'
+
+ext{
+    junit = '5.7.0'
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation fileTree(include: ['*.jar'], dir: './lib')
+
+    testImplementation "org.junit.jupiter:junit-jupiter:$junit"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+//create a single Jar with all dependencies
+task fatJar(dependsOn: test, type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'com.googlecode.com.googlecode.iperf3cygwin.Iperf3cygwin'
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    with jar
+}
+
+task deploy(dependsOn: fatJar, type: Copy) {
+    from "build/libs"
+    into "../_RELEASE"
+    include "*.jar"
+}

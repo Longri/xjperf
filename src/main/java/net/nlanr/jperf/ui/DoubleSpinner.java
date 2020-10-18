@@ -10,8 +10,7 @@
 
 package net.nlanr.jperf.ui;
 
-import javax.swing.JSpinner;
-import javax.swing.SpinnerNumberModel;
+import javax.swing.*;
 
 public class DoubleSpinner extends JSpinner
 {

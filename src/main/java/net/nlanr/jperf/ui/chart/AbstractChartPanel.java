@@ -10,12 +10,11 @@
 
 package net.nlanr.jperf.ui.chart;
 
-import java.awt.BorderLayout;
-
-import javax.swing.JPanel;
-
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+
+import javax.swing.*;
+import java.awt.*;
 
 public abstract class AbstractChartPanel extends JPanel
 {

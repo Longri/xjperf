@@ -41,33 +41,24 @@
 
 package net.nlanr.jperf.ui;
 
-import javax.swing.*;
-
-import java.awt.*;
-import java.awt.event.*;
-
-import javax.swing.border.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-
+import com.googlecode.iperf3cygwin.Iperf3cygwin;
+import net.nlanr.jperf.core.*;
+import net.nlanr.jperf.ui.FormLayoutBuilder.Alignment;
+import net.nlanr.jperf.ui.chart.IPerfChartPanel;
+import net.nlanr.jperf.ui.chart.SeriesColorGenerator;
 import org.jdesktop.swingx.JXTaskPane;
 import org.jdesktop.swingx.JXTaskPaneContainer;
 import org.jfree.ui.ExtensionFileFilter;
 
-import net.nlanr.jperf.JPerf;
-import com.googlecode.iperf3cygwin.Iperf3cygwin;
-
-import net.nlanr.jperf.core.IPerfProperties;
-import net.nlanr.jperf.core.IperfSpeedUnit;
-import net.nlanr.jperf.core.IperfThread;
-import net.nlanr.jperf.core.Measurement;
-import net.nlanr.jperf.core.TosOption;
-import net.nlanr.jperf.core.IperfUnit;
-import net.nlanr.jperf.ui.FormLayoutBuilder.Alignment;
-import net.nlanr.jperf.ui.chart.IPerfChartPanel;
-import net.nlanr.jperf.ui.chart.SeriesColorGenerator;
-
-import java.io.*;
+import javax.swing.*;
+import javax.swing.border.TitledBorder;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import static net.nlanr.jperf.core.IPerfProperties.*;
 
@@ -164,7 +155,7 @@ public class JPerfUI extends JFrame
 	{
 		super("Iperf3-Cygwin-GUI - Network performance measurement graphical tool (based on Jperf) - "+Iperf3cygwin.IPERF3CYGWIN_VERSION);
 		/*
-		 * When the jperf gui is first started up, the version is obtained. It is
+		 * When the net.nlanr.jperf gui is first started up, the version is obtained. It is
 		 * passed when creating an JperfGUI we use the version number to disable or
 		 * enable some features
 		 */

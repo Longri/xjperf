@@ -10,7 +10,7 @@
 
 package net.nlanr.jperf.ui.chart;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class SeriesColorGenerator 
 {
