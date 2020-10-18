@@ -1,3 +1,12 @@
+###This is a revival of the xpref project from the 2000s
+
+- [ ] change to gradle
+- [ ] handle using with MacOS
+- [ ] add JUnit tests
+- [ ] use ipref3 over JNI with JinGen
+- [ ] use libgdx pakr for platform bundle (https://github.com/libgdx/packr)
+
+
 ********************************************
 *        INSTALLATION INSTRUCTIONS         *
 ********************************************
